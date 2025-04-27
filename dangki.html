@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="dangki.css" />
+    <script src="script.js" defer></script>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+      <h1 class="form-title">ĐĂNG KÝ</h1>
+    <form id="registerForm" class="form-container">
+      <div class="form-group">
+        <label for="email">
+          <img src="https://static.vecteezy.com/system/resources/previews/020/009/614/original/email-and-mail-icon-black-free-png.png" alt="Email" class="icon" />
+        </label>
+        <input type="email" id="email" name="email" placeholder="Vui lòng nhập email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">
+          <img src="https://icon-library.com/images/password-icon-png/password-icon-png-6.jpg" alt="Password" class="icon" />
+        </label>
+        <input type="password" id="password" name="password" placeholder="Vui lòng nhập mật khẩu" required />
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.e1lKRzrYaLyl-RgEl2K8wQHaIa&pid=Api&P=0&h=220" alt="Confirm Password" class="icon" />
+        </label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Vui lòng nhập lại mật khẩu" required />
+      </div>
+      <div class="form-group">
+        <label>Gói:</label>
+        <input type="radio" id="silver" name="package" value="silver" />
+        <label for="silver">Bạc</label>
+        <input type="radio" id="gold" name="package" value="gold" />
+        <label for="gold">Vàng</label>
+        <input type="radio" id="platinum" name="package" value="platinum" />
+        <label for="platinum">Bạch Kim</label>
+      </div>
+      <div class="form-group">
+        <label for="fileUpload">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.l7NLlbWqqVgB3JtdCt-vUAHaHc&pid=Api&P=0&h=220" alt="Upload" class="icon" />
+        </label>
+        <input type="file" id="fileUpload" name="fileUpload" />
+      </div>
+      <p>
+        Thông qua việc tạo tài khoản, bạn đồng ý với
+        <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a>.
+      </p>
+      <div class="form-buttons">
+        <button type="submit">Đăng Ký</button>
+        <button type="reset">Hủy</button>
+      </div>
+    </form>
+    <p id="errorMessages" style="color: red;"></p>
+    <p>
+        Bạn đã có tài khoản? 
+        <a href="login.html">Đăng Nhập</a>
+      </p>
+      <p>
+        Bạn muốn liên hệ với chúng tôi?
+        <a href="lienhe.html">Liên Hệ</a>
+      </p>
+    <p>
+      Trở về trang chủ
+      <a href="index.html">Trang Chủ</a>
+    </p>
+  </body>
+</html>

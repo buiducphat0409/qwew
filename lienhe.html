@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="lienhe.css" />
+  </head>
+
+      <h1 class="form-title">LIÊN HỆ</h1>
+      <p>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
+          alt="Address"
+          class="icon"
+        />
+        Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ
+        <br />
+        Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu
+        mẫu bên dưới. Xin cảm ơn.
+      </p>
+      <h2 class="form-title">GÓP Ý</h2>
+      <form id="contactForm" class="form-container">
+        <div class="form-group">
+          <label for="fullname">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+              alt="Full Name"
+              class="icon"
+            />
+          </label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Vui lòng nhập Họ tên của bạn"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              alt="Email"
+              class="icon"
+            />
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Vui lòng nhập địa chỉ Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/906/906794.png"
+              alt="Subject"
+              class="icon"
+            />
+          </label>
+          <select id="subject" name="subject" required>
+            <option value="">Về Sản Phẩm/Dịch Vụ</option>
+            <option value="product">Sản Phẩm</option>
+            <option value="service">Dịch Vụ</option>
+            <option value="other">Khác</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1250/1250620.png"
+              alt="Message"
+              class="icon"
+            />
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Nội dung cần liên hệ"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Gửi</button>
+          <button type="reset">Hủy</button>
+        </div>
+      </form>
+      <p>
+        Bạn đã có tài khoản?
+        <a href="login.html">Đăng Nhập</a>
+      </p>
+      <p>
+        Bạn chưa có tài khoản?
+        <a href="dangki.html">Đăng Ký</a>
+      </p>
+      <p>
+        Trở về trang chủ
+        <a href="index.html">->Trang Chủ</a>
+      </p>
+  </body>
+</html>

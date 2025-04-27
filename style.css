@@ -1,0 +1,502 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Màu nền nhạt */
+  color: #333; /* Màu chữ chính */
+}
+
+/* Header */
+.tieude {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4caf50; /* Màu nền xanh lá */
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+.hinhnen1{
+  width: 100%;
+
+  
+}
+
+.tieude h1 {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-login {
+  background-color: #000300; /* Màu nền */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Không có viền */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  text-align: center; /* Căn giữa chữ */
+  display: inline-block; /* Đảm bảo nút hiển thị đúng */
+  width: 100%; /* Đảm bảo kích thước đồng nhất */
+  text-decoration: none !important; /* Xóa gạch chân và ưu tiên thuộc tính */
+}
+
+.btn-login:hover {
+  background-color: blue; /* Màu khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  text-decoration: none !important; /* Đảm bảo không có gạch chân khi hover */
+}
+
+.btn-login:active {
+  background-color: #f5f7fc; /* Màu khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+  text-decoration: none !important; /* Đảm bảo không có gạch chân khi nhấn */
+}
+
+/* Danh sách sách */
+.cacdanhmucsachmini ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.cacdanhmucsachmini ul li {
+  width: 18%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 400px;
+}
+
+.cacdanhmucsachmini ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cacdanhmucsachmini ul li img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.cacdanhmucsachmini ul li .book-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cacdanhmucsachmini ul li .book-price {
+  font-size: 14px;
+  color: #e53935; /* Màu đỏ */
+  font-weight: bold;
+  margin-bottom: px;
+}
+
+/* Nút hành động */
+.book-buy,
+.chitiet {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 5px 0;
+  width: 80%;
+}
+
+.book-buy:hover {
+  background-color: #4caf50; /* Màu xanh lá */
+  color: white;
+}
+
+.chitiet {
+  background-color: #007bff; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Không có viền */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  text-align: center; /* Căn giữa chữ */
+  display: inline-block; /* Đảm bảo nút hiển thị đúng */
+  width: 80%; /* Đảm bảo kích thước đồng nhất với nút "Mua Ngay" */
+}
+
+.chitiet:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.chitiet:active {
+  background-color: #004494; /* Màu xanh đậm hơn khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+/* Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.page-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Menu thể loại */
+.MenuTheloai {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.MenuTheloai h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.MenuTheloai li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.MenuTheloai li:hover {
+  transform: scale(1.05);
+  background-color: rgb(218, 224, 228);
+}
+.Phanbenphai h3 {
+  height: auto;
+}
+
+/* Phần tìm kiếm (pagination) */
+.pagination {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; /* Khoảng cách giữa các nút */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  background-color: #f8f9fa; /* Màu nền nhạt */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  width: 100%;
+}
+
+.page-btn {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px; /* Bo góc nút */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.page-btn:hover {
+  background-color: #007bff; /* Màu xanh khi hover */
+  color: #fff;
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+.page-btn.active {
+  background-color: #007bff; /* Màu xanh cho nút đang chọn */
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination span {
+  padding: 8px 12px;
+  color: #999;
+}
+
+.pagination .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .dot.active {
+  background-color: red;
+}
+
+.pagination .dot:hover {
+  background-color: #888;
+}
+
+
+
+.timkiem {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Kéo dài ra chiếm chỗ trống */
+  max-width: 600px; /* Giới hạn chiều rộng */
+  background-color: #000;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+#search-input {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  outline: none;
+  flex: 1; /* Kéo rộng hết trong .timkiem */
+  min-width: 0; /* Fix lỗi tràn layout */
+  background-color: #fff; /* Cho input trắng nổi bật */
+}
+
+#search-button {
+  background-color: #000;
+  border: none;
+  padding: 0 15px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #333;
+}
+
+
+/* Giỏ Hàng */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+  color: white; /* Màu chữ */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  position: relative; /* Để có thể sử dụng absolute cho số lượng */
+}
+
+.cart i {
+  font-size: 20px; /* Kích thước biểu tượng */
+}
+
+.cart:hover {
+  background-color: blue; /* Màu xanh khi hover */
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+  background-color: black; /* Nền đen */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  
+  text-align: center; /* Căn giữa chữ */
+}
+
+.notification a {
+  text-decoration: none;
+  color: white; /* Màu chữ */
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+  width: 100%; /* Đảm bảo chữ nằm trong khung */
+  justify-content: center; /* Căn giữa chữ */
+  text-align: center; /* Căn giữa chữ */
+  /
+}
+
+.notification i {
+  font-size: 20px; /* Kích thước biểu tượng */
+}
+
+.notification:hover {
+  background-color: blue; /* Màu xanh khi hover */
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+/* Thông báo popup */
+.notification-popup {
+  display: none; /* Ẩn mặc định */
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+.book-buy {
+  background-color: #4caf50; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Không có viền */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+.book-buy:hover {
+  background-color: #45a049; /* Màu xanh lá đậm hơn khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+.book-buy:active {
+  background-color: #3e8e41; /* Màu xanh lá đậm hơn khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+.chitiet {
+  background-color: #007bff; /* Màu nền xanh */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Không có viền */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  text-align: center; /* Căn giữa chữ */
+  display: inline-block; /* Đảm bảo nút hiển thị đúng */
+  width: 80%; /* Đảm bảo kích thước đồng nhất với nút "Mua Ngay" */
+}
+
+.chitiet:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.chitiet:active {
+  background-color: #004494; /* Màu xanh đậm hơn khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+/* Lịch sử tìm kiếm */
+.lichsutimkiem {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.lichsutimkiem ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lichsutimkiem li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.lichsutimkiem li:hover {
+  background-color: #eee;
+}

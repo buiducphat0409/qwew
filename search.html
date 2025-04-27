@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kết Quả Tìm Kiếm</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="search.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><a href="index.html">Tiêu đề</a></div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm sách..." />
+        <button><i class="fas fa-search"></i></button>
+        <div class="lichsutimkiem">
+          <h4>Lịch sử tìm kiếm:</h4>
+          <ul id="search-history"></ul>
+        </div>
+      </div>
+
+      <div class="header-icons">
+        <div class="icon-box">
+          <i class="fas fa-bell" title="Thông báo"></i>
+        </div>
+        <div class="icon-box">
+          <a href="./cart.html">
+            <i class="fas fa-shopping-cart" title="Giỏ hàng"></i>
+          </a>
+        </div>
+        <div class="icon-box">
+          <a href="./login.html">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Bảng lọc -->
+      <div class="filter-panel">
+        <h3>LỌC THEO</h3>
+        <div>
+          <h4>Danh Mục Chính</h4>
+          <input type="checkbox" /> Đồ Chơi<br />
+          <input type="checkbox" /> Foreign Books<br />
+          <input type="checkbox" /> Sách Tiếng Việt<br />
+          <input type="checkbox" /> Văn Phòng Phẩm<br />
+          <input type="checkbox" /> Bách Hóa<br />
+        </div>
+        <div>
+          <h4>Giá</h4>
+          <input type="checkbox" /> 0đ - 150.000đ<br />
+          <input type="checkbox" /> 150.000đ - 300.000đ<br />
+          <input type="checkbox" /> 300.000đ - 500.000đ<br />
+          <input type="checkbox" /> 500.000đ - 700.000đ<br />
+          <input type="checkbox" /> 700.000đ trở lên<br />
+        </div>
+        <div>
+          <h4>Thương Hiệu</h4>
+          <input type="checkbox" /> ToTy<br />
+          <input type="checkbox" /> DZN<br />
+          <input type="checkbox" /> Hồng Hà<br />
+          <input type="checkbox" /> Pentel<br />
+        </div>
+      </div>
+
+      <!-- Kết quả tìm kiếm -->
+      <div class="search-results">
+        <div class="search-header">
+          <h2 id="search-title">Kết quả tìm kiếm: ""</h2>
+          <p id="search-count">(0 kết quả)</p>
+        </div>
+        <div class="search-grid" id="search-grid">
+          <!-- Dữ liệu sách tĩnh -->
+          <div class="book-item" data-title="SPY × FAMILY">
+            <img
+              src="https://cdn0.fahasa.com/media/catalog/product/9/7/9784088838397.jpg"
+              alt="SPY × FAMILY"
+            />
+            <h4>SPY × FAMILY</h4>
+            <div class="price">233.600 đ</div>
+            <div class="old-price">292.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Spy Classroom">
+            <img
+              src="https://cdn0.fahasa.com/media/catalog/product/9/7/9784046805423.jpg"
+              alt="Spy Classroom"
+            />
+            <h4>Spy Classroom</h4>
+            <div class="price">158.400 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Spy Mazes">
+            <img
+              src="https://cdn0.fahasa.com/media/catalog/product/9/7/9781474998444.jpg"
+              alt="Spy Mazes"
+            />
+            <h4>Spy Mazes</h4>
+            <div class="price">160.500 đ</div>
+            <div class="old-price">214.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Búp Sen Xanh">
+            <img
+              src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935244826487.jpg"
+              alt="Búp Sen Xanh"
+            />
+            <h4>Búp Sen Xanh</h4>
+            <div class="price">50.000 đ</div>
+            <div class="old-price">72.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Hồ Sơ Mật">
+            <img
+              src="https://cdn1.fahasa.com/media/catalog/product/n/x/nxbtre_full_02342025_043441_1.jpg"
+              alt="Hồ Sơ Mật"
+            />
+            <h4>Hồ Sơ Mật</h4>
+            <div class="price">70.000 đ</div>
+            <div class="old-price">80.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Sách HSK1">
+            <img
+              src="https://cdn1.fahasa.com/media/catalog/product/9/7/9786043775662.jpg"
+              alt="Sách HSK1"
+            />
+            <h4>Sách HSK1</h4>
+            <div class="price">120.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Tuổi Thơ Dữ Dội">
+            <img
+              src="https://cdn1.fahasa.com/media/catalog/product/i/m/image_187163_thanh_ly.jpg"
+              alt="Tuổi Thơ Dữ Dội"
+            />
+            <h4>Tuổi Thơ Dữ Dội</h4>
+            <div class="price">30.000 đ</div>
+            <div class="old-price">80.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Giải Mã Hoóc môn dopamine">
+            <img
+              src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935278607144.jpg"
+              alt="Giải Mã Hoóc môn dopamine"
+            />
+            <h4>Giải Mã Hoóc môn dopamine</h4>
+            <div class="price">90.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+          <div class="book-item" data-title="Lịch Sử Việt Nam bằng Tranh">
+            <img src="./img/8935244874389.jpg" alt="Sách 4" width="158" />
+            <h4>Lịch Sử Việt Nam bằng Tranh</h4>
+            <div class="price">45.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="50 Đề Ôn Tốt Nghiệp 2025">
+            <img src="./img/9786044065526.jpg" alt="Sách 5" width="158" />
+            <h4>50 Đề Ôn Tốt Nghiệp 2025</h4>
+            <div class="price">22.750 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Dấu Ấn Hoàng Gia - Tập 20">
+            <img
+              src="./img/dau-an-hoang-gia_tap-20_bia.webp"
+              alt="Dấu ấn hoàng gia tập 20"
+              width="158"
+            />
+            <h4>Dấu Ấn Hoàng Gia - Tập 20</h4>
+            <div class="price">58.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Attack On Titan - Tập 26">
+            <img
+              src="./img/nxbtre_full_11242025_112431.jpg"
+              alt="Sách 6"
+              width="158"
+            />
+            <h4>Attack On Titan - Tập 26</h4>
+            <div class="price">22.750 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Thủ Lĩnh Thẻ Bài Sakura - Tập 15">
+            <img
+              src="./img/card-captor-sakura_the-bai-pha-le_tap-15_bia.webp"
+              alt="Card Captor Sakura tập 15"
+              width="158"
+            />
+            <h4>Thủ Lĩnh Thẻ Bài Sakura - Tập 15</h4>
+            <div class="price">50.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Chia Sẻ Từ Trái Tim">
+            <img
+              src="./img/chiasetutraitim-bia.webp"
+              alt="Chia sẻ từ trái tim"
+              width="158"
+            />
+            <h4>Chia Sẻ Từ Trái Tim</h4>
+            <div class="price">45.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Gia Đình Điệp Viên">
+            <img src="./img/1.webp" alt="Sách 7" width="158" />
+            <h4>Gia Đình Điệp Viên</h4>
+            <div class="price">45.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Vị Thần Lang Thang - Tập 26">
+            <img src="./img/2.webp" alt="Sách 8" width="158" />
+            <h4>Vị Thần Lang Thang - Tập 26</h4>
+            <div class="price">42.750 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Đươc Học - Tara Westoyer">
+            <img src="./img/3.webp" alt="Sách 9" width="158" />
+            <h4>Đươc Học - Tara Westoyer</h4>
+            <div class="price">22.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Khi Mọi Điều Không Như Ý">
+            <img src="./img/4.webp" alt="Sách 10" width="158" />
+            <h4>Khi Mọi Điều Không Như Ý</h4>
+            <div class="price">85.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Bảng Xếp Hạng Quân Vương - Tập 3">
+            <img
+              src="./img/5.webp"
+              alt="Bảng Xếp Hạng Quân Vương - Tập 3"
+              width="158"
+            />
+            <h4>Bảng Xếp Hạng Quân Vương - Tập 3</h4>
+            <div class="price">22.750 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Giáo Trình Chuẩn HSK 2">
+            <img src="./img/6.webp" alt="Giáo Trình Chuẩn HSK 2" width="158" />
+            <h4>Giáo Trình Chuẩn HSK 2</h4>
+            <div class="price">158.400 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div
+            class="book-item"
+            data-title="Nhiệm Vụ Tối Thượng Nhà Yozakura - Tập 16"
+          >
+            <img
+              src="./img/7.webp"
+              alt="Nhiệm Vụ Tối Thượng Nhà Yozakura - Tập 16"
+              width="158"
+            />
+            <h4>Nhiệm Vụ Tối Thượng Nhà Yozakura - Tập 16</h4>
+            <div class="price">28.500 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Dấu Ấn Hoàng Gia - Tập 18">
+            <img src="./img/8.webp" alt="Sách 14" width="158" />
+            <h4>Dấu Ấn Hoàng Gia - Tập 18</h4>
+            <div class="price">45.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Hồ Điệp Kính Tử">
+            <img src="./img/9.webp" alt="Sách 15" width="158" />
+            <h4>Hồ Điệp Kính Tử</h4>
+            <div class="price">62.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Attack On Titan - Tập 25">
+            <img src="./img/10.jpg" alt="Sách 16" width="158" />
+            <h4>Attack On Titan - Tập 25</h4>
+            <div class="price">45.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Seraph Of The End - Tập 31">
+            <img src="./img/11.webp" alt="Sách 17" width="158" />
+            <h4>Seraph Of The End - Tập 31</h4>
+            <div class="price">35.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div class="book-item" data-title="Thám Tử Lừng Danh Conan - Tập 21">
+            <img src="./img/12.webp" alt="Sách 18" width="158" />
+            <h4>Thám Tử Lừng Danh Conan - Tập 21</h4>
+            <div class="price">25.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+
+          <div
+            class="book-item"
+            data-title="50 Đề Tốt Nghiệp THPT 2025 - Môn Hóa Học"
+          >
+            <img src="./img/13.webp" alt="Sách 19" width="158" />
+            <h4>50 Đề Tốt Nghiệp THPT 2025 - Môn Hóa Học</h4>
+            <div class="price">120.000 đ</div>
+            <div class="old-price">198.000 đ</div>
+            <div class="book-buy">Mua Ngay</div>
+            <div class="chitiet">Chi Tiết</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="search.js"></script>
+  </body>
+</html>
